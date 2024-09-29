@@ -1,0 +1,202 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: white;
+}
+
+img{
+  max-width: 100%; /*so images are scaled down if required but never up*/
+  height: auto;
+}
+
+.navbar ul img{
+  padding-right: 25px;
+}
+.navbar {
+  background-color:whitesmoke;
+  padding: 1rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.navbar li {
+  padding: 10px;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  
+}
+
+.navbar-right {
+  display: flex;
+  margin-left: auto;
+}
+
+.navbar-right li {
+  margin-left: 20px;
+  
+}
+
+.secondary-navbar {
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid lightgray;
+}
+
+.secondary-navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+}
+
+.secondary-navbar ul li {
+  margin: 0 15px;
+}
+
+.secondary-navbar ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+}
+.secondary-navbar ul li a:hover {
+  color: orange;
+}
+
+/* Dropdown Menu for smaller screen (responsive) */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  color: black;
+  cursor: pointer;
+  background-color: whitesmoke;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: whitesmoke;
+    font-size: 0.9rem;
+  }
+  .navbar ul img{
+    display: none;
+  }
+
+  .navbar-right {
+    display: block;
+    margin-left: 0;
+  }
+
+  .navbar-right li {
+    margin: 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  /*Show the menu when the checkbox is checked*/
+  #menu-toggle:checked ~ .navbar-list {
+    display: flex;
+  }
+
+  .secondary-navbar ul {
+    flex-direction: row;
+  }
+}
+
+main {
+  flex: 1;
+}
+
+.content {
+  background-color: white;
+  padding: 2rem;
+}
+
+.content h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  text-align: center;
+}
+
+
+/*for smaller screens reduce font size of main content*/
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 1.5rem;
+  }
+}
+
+footer {
+  border-top: 1px solid lightgray;
+  background-color:whitesmoke;
+  color:black;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/*for smaller screens reduce font size of footer*/
+@media (max-width: 768px) {
+  footer p {
+    font-size: 0.7rem;
+  }
+}
+
+
+/*for screen sizes below 480px*/
+@media (max-width: 480px) {
+  .navbar ul {
+    font-size: 0.8rem;
+    padding: 0;
+  }
+
+  .content h1 {
+    font-size: 1.2rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+
+  .secondary-navbar ul li {
+    margin: 0 10px;
+  }
+}
+@media (max-width: 480px) {
+  body, main {
+    padding: 10px;
+  }
+}
